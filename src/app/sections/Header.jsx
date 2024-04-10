@@ -4,6 +4,7 @@ import { CiMenuFries } from "react-icons/ci";
 import useMenu from "../hooks/useMenu";
 import { FaXmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const scroll = useScroll();
@@ -30,37 +31,37 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li onClick={hideMenu}>
-              <Link to="/#about">About</Link>
+              <HashLink to="/#about">About</HashLink>
             </li>
             <li onClick={hideMenu}>
-              <Link to="/#rents">Rent</Link>
+              <HashLink to="/#rents">Rent</HashLink>
             </li>
             <li onClick={hideMenu}>
-              <Link href="/#cars">Cars</Link>
+              <HashLink to="/#cars">Cars</HashLink>
             </li>
             <li onClick={hideMenu}>
-              <Link href="/#blogs">News</Link>
+              <HashLink to="/#blogs">News</HashLink>
             </li>
             <li
               className="sm:hidden"
               onClick={hideMenu}
             >
-              <Link
-                href="/#subscribe"
+              <HashLink
+                to="/#subscribe"
                 className="btn bg-gradient-to-tr from-primary to-secondary rounded-full text-white"
               >
                 Contact
-              </Link>
+              </HashLink>
             </li>
           </ul>
         </nav>
         <div className="hidden lg:block">
-          <a
-            href="#"
+          <HashLink
+            to="/#subscribe"
             className="btn bg-gradient-to-tr from-primary to-secondary rounded-full text-white"
           >
             Contact
-          </a>
+          </HashLink>
         </div>
 
         {toggle ? (
