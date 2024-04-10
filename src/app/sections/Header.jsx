@@ -15,10 +15,10 @@ const Header = () => {
       className={`bg-white h-16 flex items-center fixed top-0 left-0 right-0 z-50 ${scroll}`}
     >
       <div className="flex items-center justify-between w-4/5 mx-auto text-sm">
-        <div className="flex items-center gap-2 text-primary relative z-50">
+        <Link to="/" className="flex items-center gap-2 text-primary relative z-50">
           <MdOutlineTravelExplore className="text-xl" />
           <span>Travel.</span>
-        </div>
+        </Link>
         <nav
           className={`fixed z-10 bottom-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:transform-none ${
             toggle
