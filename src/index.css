@@ -28,3 +28,9 @@ body {
 .input {
   @apply flex flex-col gap-1 w-full;
 }
+
+.input {
+  label {
+    @apply text-sm;
+  }
+}

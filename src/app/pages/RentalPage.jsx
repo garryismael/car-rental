@@ -21,7 +21,7 @@ const RentalPage = () => {
             <div className="w-[26rem] h-[500px]">
               <img className="object-cover w-[26rem] h-full" src={car.image}/>
             </div>
-            <form className="py-12 mx-auto flex flex-col gap-4">
+            <form className="mx-auto flex flex-col gap-3">
               <div className="flex items-center gap-4">
                 <div className="input">
                   <label htmlFor="firstName">First Name</label>
@@ -38,7 +38,7 @@ const RentalPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex items-center gap-2 mt-4">
+              <div className="flex items-center gap-2 ">
                 <div className="input">
                   <label htmlFor="phoneNumber">Phone Number</label>
                   <input
@@ -54,7 +54,7 @@ const RentalPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex items-center gap-2 mt-4">
+              <div className="flex items-center gap-2 ">
                 <div className="input">
                   <label htmlFor="cardName">Card Name</label>
                   <input
@@ -70,7 +70,7 @@ const RentalPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex items-center mt-4">
+              <div className="flex items-center ">
                 <div className="input">
                   <label htmlFor="cvc">CVC</label>
                   <input
