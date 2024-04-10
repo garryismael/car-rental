@@ -5,7 +5,7 @@ import New from "../components/New";
 
 const Blog = () => {
   return (
-    <section className="wrapper">
+    <section id="blogs" className="wrapper">
       <div className="flex items-center justify-between">
         <h1 className="title !text-left">Feature News</h1>
         <div className="flex items-center gap-2">

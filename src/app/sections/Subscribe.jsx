@@ -2,7 +2,7 @@ import { subscribe } from "../../assets";
 
 const Subscribe = () => {
   return (
-    <section className="wrapper bg-gray-300 flex items-center justify-between flex-wrap rounded-2xl mb-24">
+    <section id="subscribe" className="wrapper bg-gray-300 flex items-center justify-between flex-wrap rounded-2xl mb-24">
       <div className="w-96 h-60">
         <img
           src={subscribe}

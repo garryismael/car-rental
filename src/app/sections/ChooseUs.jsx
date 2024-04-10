@@ -3,7 +3,7 @@ import { services } from "../constants";
 
 const ChooseUs = () => {
   return (
-    <section className="wrapper py-12">
+    <section id="about" className="wrapper py-12">
       <h1 className="title">Why choose us</h1>
       <div className="flex items-center justify-around flex-wrap pt-12">
         {services.map((service, i) => (

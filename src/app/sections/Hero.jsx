@@ -26,16 +26,20 @@ InputCalendar.propTypes = {
 };
 
 const Hero = () => {
-  const {findAvailableCars} = useRent();
+  const { findAvailableCars } = useRent();
   const [startDate, setStartDate] = useState(new Date());
 
   return (
-    <section className="h-screen bg-hero bg-no-repeat bg-cover bg-bottom">
+    <section id="rents" className="h-screen bg-hero bg-no-repeat bg-cover bg-bottom">
       <div className="absolute-center w-5/6 lg:w-3/4 mx-auto">
-        <h1 className="uppercase text-xs text-white">Our Packages</h1>
-        <h2 className="font-bold text-4xl text-white">Search your holiday</h2>
+        <h1 className="uppercase text-xs text-white">Find cars</h1>
+        <h2 className="font-bold text-4xl text-white">Make a car rental</h2>
         <div className="bg-white shadow-md rounded-xl h-full lg:h-32 p-5 lg:p-10 mt-10">
-          <form onSubmit={findAvailableCars} noValidate className="flex flex-col sm:flex-row items-center justify-around gap-6">
+          <form
+            onSubmit={findAvailableCars}
+            noValidate
+            className="flex flex-col sm:flex-row items-center justify-around gap-6"
+          >
             <div className="flex flex-col gap-1 w-full">
               <label
                 htmlFor="destination"
@@ -58,7 +62,7 @@ const Hero = () => {
                 htmlFor="date"
                 className="text-xs block mb-1"
               >
-                Select your date
+                start date
               </label>
               <DatePicker
                 selected={startDate}
@@ -68,17 +72,19 @@ const Hero = () => {
                 wrapperClassName="w-full"
               />
             </div>
-            <div className="flex flex-col gap-1 w-full">
+            <div className="w-full block">
               <label
                 htmlFor="date"
-                className="text-xs"
+                className="text-xs block mb-1"
               >
-                Max price
+                end date
               </label>
-              <input
-                type="number"
-                placeholder="price..."
-                className="w-full bg-gray-100 px-4 text-xs rounded-full h-12 lg:h-8"
+              <DatePicker
+                selected={startDate}
+                minDate={new Date()}
+                onChange={(date) => setStartDate(date)}
+                customInput={<InputCalendar />}
+                wrapperClassName="w-full"
               />
             </div>
             <div className="relative pt-4">

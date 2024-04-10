@@ -3,6 +3,7 @@ import useScroll from "../hooks/useScroll";
 import { CiMenuFries } from "react-icons/ci";
 import useMenu from "../hooks/useMenu";
 import { FaXmark } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const scroll = useScroll();
@@ -26,33 +27,30 @@ const Header = () => {
         >
           <ul className="flex items-center flex-col gap-6 lg:flex-row">
             <li onClick={hideMenu}>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li onClick={hideMenu}>
-              <a href="#">Packages</a>
+              <Link to="/#about">About</Link>
             </li>
             <li onClick={hideMenu}>
-              <a href="#">Shop</a>
+              <Link to="/#rents">Rent</Link>
             </li>
             <li onClick={hideMenu}>
-              <a href="#">About</a>
+              <Link href="/#cars">Cars</Link>
             </li>
             <li onClick={hideMenu}>
-              <a href="#">Pages</a>
-            </li>
-            <li onClick={hideMenu}>
-              <a href="#">News</a>
+              <Link href="/#blogs">News</Link>
             </li>
             <li
               className="sm:hidden"
               onClick={hideMenu}
             >
-              <a
-                href="#"
+              <Link
+                href="/#subscribe"
                 className="btn bg-gradient-to-tr from-primary to-secondary rounded-full text-white"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
