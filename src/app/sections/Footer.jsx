@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-950 text-white">
       <div className="wrapper pt-16 pb-4 ">
-        <div className="flex flex-wrap justify-between pb-24">
+        <div className="flex flex-wrap justify-between gap-6 pb-24">
           <div>
             <p className="font-bold">Support</p>
             <ul className="flex flex-col gap-2 text-sm mt-4">
@@ -84,7 +84,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between border-t border-t-white py-8">
+        <div className="flex items-center justify-between flex-wrap gap-4 border-t border-t-white py-8">
           <p className="text-xs font-thin">&#169; Copyright Tatiana 2024</p>
           <div className="flex items-center gap-4">
             <div className="w-12 h-10">
