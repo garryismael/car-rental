@@ -15,7 +15,7 @@ const Service = ({ icon, title, text }) => {
 };
 
 Service.propTypes = {
-  icon: PropTypes.func,
+  icon: PropTypes.object,
   title: PropTypes.string,
   text: PropTypes.string,
 };

@@ -32,7 +32,7 @@ const Car = ({ name, price, image, star, location }) => {
 
 Car.propTypes = {
   name: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   image: PropTypes.string,
   star: PropTypes.number,
   location: PropTypes.string,

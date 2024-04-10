@@ -3,6 +3,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import DatePicker from "react-datepicker";
 import PropTypes from "prop-types";
 import { FaCalendar, FaSearch } from "react-icons/fa";
+import useRent from "../hooks/useRent";
 
 const InputCalendar = forwardRef(({ value, onClick }, ref) => (
   <button
@@ -25,6 +26,7 @@ InputCalendar.propTypes = {
 };
 
 const Hero = () => {
+  const {findAvailableCars} = useRent();
   const [startDate, setStartDate] = useState(new Date());
 
   return (
@@ -33,7 +35,7 @@ const Hero = () => {
         <h1 className="uppercase text-xs text-white">Our Packages</h1>
         <h2 className="font-bold text-4xl text-white">Search your holiday</h2>
         <div className="bg-white shadow-md rounded-xl h-full lg:h-32 p-5 lg:p-10 mt-10">
-          <form className="flex flex-col sm:flex-row items-center justify-around gap-6">
+          <form onSubmit={findAvailableCars} noValidate className="flex flex-col sm:flex-row items-center justify-around gap-6">
             <div className="flex flex-col gap-1 w-full">
               <label
                 htmlFor="destination"
@@ -80,7 +82,10 @@ const Hero = () => {
               />
             </div>
             <div className="relative pt-4">
-              <button className="px-7 bg-secondary h-12 lg:h-8 gap-3 text-white rounded-full flex items-center">
+              <button
+                type="submit"
+                className="px-7 bg-secondary h-12 lg:h-8 gap-3 text-white rounded-full flex items-center"
+              >
                 <span>Search</span>
                 <FaSearch />
               </button>

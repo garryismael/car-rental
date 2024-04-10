@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
         element: <CarAvailable />,
       },
       {
-        path: "car-rents",
+        path: "rents/:id",
         element: <RentalPage />,
       },
     ],
