@@ -1,10 +1,15 @@
 import PropTypes from "prop-types";
 import { CiLocationOn } from "react-icons/ci";
 import { FaStar } from "react-icons/fa6";
+import useRent from "../hooks/useRent";
 
-const Car = ({ name, price, image, star, location }) => {
+const Car = ({ id, name, price, image, star, location }) => {
+  const { chooseCar } = useRent();
   return (
-    <div className="w-48 flex flex-col">
+    <div
+      className="w-48 flex flex-col cursor-pointer"
+      onClick={() => chooseCar(id)}
+    >
       <div className="relative mb-4">
         <div className="w-48 h-56">
           <img
@@ -31,6 +36,7 @@ const Car = ({ name, price, image, star, location }) => {
 };
 
 Car.propTypes = {
+  id: PropTypes.number,
   name: PropTypes.string,
   price: PropTypes.string,
   image: PropTypes.string,

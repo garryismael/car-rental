@@ -7,7 +7,11 @@ const useRent = () => {
     navigate("/car-available");
   };
 
-  return { findAvailableCars };
+  const chooseCar = (id) => {
+    navigate(`/rents/${id}`);
+  };
+
+  return { findAvailableCars, chooseCar };
 };
 
 export default useRent;

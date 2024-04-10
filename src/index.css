@@ -20,3 +20,11 @@ body {
 .title {
   @apply text-center text-3xl font-semibold uppercase;
 }
+
+.input-field {
+  @apply w-full border border-gray-300 rounded-md h-9 px-3;
+}
+
+.input {
+  @apply flex flex-col gap-1 w-full;
+}
